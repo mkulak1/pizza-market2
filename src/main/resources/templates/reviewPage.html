@@ -6,12 +6,10 @@
 <section id="review-content">
   <div class="container">
     <h1>Opinie</h1>
-    <div>
-    <h3 th:text="${review.name}"></h3>
-      <p th:text="${review.review}"></p>
-      <p th:each="review : ${reviews}"></p>
-      <p th:text="${reviews}"></p>
-  </div>
+    <div th:each="review : ${reviews}">
+      <h3 th:text="${review.name}"></h3>
+      <p style="font-weight: 200" th:text="${review.review}"></p>
+    </div>
     <h3>Dodaj nową opinię</h3>
     <form method="post" th:object="${review}">
       <div>

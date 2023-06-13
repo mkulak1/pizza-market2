@@ -34,6 +34,6 @@ public class ReviewController {
     public String reviewPage(@ModelAttribute("review") ReviewModel reviewModel) {
         reviewService.saveReview(reviewModel);
 
-        return "reviewPage";
+        return "redirect:/review";
     }
 }
